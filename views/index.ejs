@@ -1,0 +1,17 @@
+<%- include('layout/header') %>
+<main>
+    <form action="/" method="post">
+        <input type="text" name="pl" placeholder="Programming Language">
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        <% if(plArr.length > 0) { 
+            plArr.map(lang => {%>
+                <li><%= lang %></li>
+        <% })}else { %>
+            <p>No Data found.</p>
+        <% } %>
+    </ul>
+</main>
+
+<%- include('layout/footer') %>
